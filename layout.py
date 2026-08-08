@@ -53,16 +53,3 @@ def render_sidebar(url_meta, email_meta):
             unsafe_allow_html=True,
         )
 
-        st.divider()
-        st.markdown("**📋 User Evaluation Survey**")
-        st.markdown(
-            "<div style='font-size:0.82rem; color:#94b8b4; margin-bottom:0.6rem;'>"
-            "Please complete the survey after testing the system.</div>",
-            unsafe_allow_html=True,
-        )
-        st.link_button(
-            "📝 Take the Survey",
-            "https://forms.cloud.microsoft/r/3b4ycszw9x",
-            use_container_width=True,
-            type="primary",
-        )
