@@ -111,32 +111,14 @@ def render(url_meta, email_meta):
 
     st.markdown("<br>", unsafe_allow_html=True)
 
-    perf_col, survey_col = st.columns([3, 1])
-
-    with perf_col:
-        st.subheader("Model Performance Summary")
-        url_f1 = url_meta.get("f1_score")
-        email_f1 = email_meta.get("f1_score")
-        m1, m2, m3, m4 = st.columns(4)
-        m1.metric("URL Classifier", url_meta.get("best_model", "XGBoost"))
-        m2.metric("URL F1 Benchmark", f"{url_f1:.4f}" if isinstance(url_f1, float) else "0.9730")
-        m3.metric("Email Classifier", email_meta.get("best_model", "LinearSVM"))
-        m4.metric("Email F1 Benchmark", f"{email_f1:.4f}" if isinstance(email_f1, float) else "0.9790")
-
-    with survey_col:
-        st.subheader("📋 Participant Survey")
-        st.markdown(
-            "<div style='font-size:0.85rem; color:#64748B; margin-bottom:0.75rem;'>"
-            "After testing the system, please share your feedback to support this research."
-            "</div>",
-            unsafe_allow_html=True,
-        )
-        st.link_button(
-            "📝 Take the Survey",
-            "https://forms.cloud.microsoft/r/3b4ycszw9x",
-            use_container_width=True,
-            type="primary",
-        )
+    st.subheader("Model Performance Summary")
+    url_f1 = url_meta.get("f1_score")
+    email_f1 = email_meta.get("f1_score")
+    m1, m2, m3, m4 = st.columns(4)
+    m1.metric("URL Classifier", url_meta.get("best_model", "XGBoost"))
+    m2.metric("URL F1 Benchmark", f"{url_f1:.4f}" if isinstance(url_f1, float) else "0.9730")
+    m3.metric("Email Classifier", email_meta.get("best_model", "LinearSVM"))
+    m4.metric("Email F1 Benchmark", f"{email_f1:.4f}" if isinstance(email_f1, float) else "0.9790")
 
 
     st.markdown("<br>", unsafe_allow_html=True)
