@@ -26,7 +26,11 @@ def render_sidebar(url_meta, email_meta):
             """
             <div style="font-size: 0.85rem; color: #94A3B8; margin-bottom: 1.25rem;">
                 <strong>Project:</strong> Phishing Detection System<br>
-                <strong>Author:</strong> sbshihab24
+                <strong>Developer:</strong> Mehedi Hasan Shihab<br>
+                <a href="https://github.com/sbshihab24" target="_blank"
+                   style="color: #60A5FA; text-decoration: none;">
+                   🔗 github.com/sbshihab24
+                </a>
             </div>
             """,
             unsafe_allow_html=True,
