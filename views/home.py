@@ -31,6 +31,16 @@ URL_SAMPLES = [
         "url": "https://www.gov.uk/apply-universal-credit",
         "reason": "HTTPS active, official .gov.uk domain, clean URL structure."
     },
+    {
+        "label": "🔴 Phishing Example 4",
+        "url": "http://amazon-security-alert.com/login?redirect=account&verify=true&session=x9k2",
+        "reason": "Fake Amazon domain, no HTTPS, suspicious query parameters designed to steal credentials."
+    },
+    {
+        "label": "🟢 Legitimate Example 3",
+        "url": "https://github.com/login",
+        "reason": "HTTPS active, clean short URL, globally trusted domain, no suspicious patterns."
+    },
 ]
 
 EMAIL_SAMPLES = [
